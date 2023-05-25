@@ -1,34 +1,34 @@
 #include "monty.h"
 
 /**
- * free_stack - Frees a doubly linked list.
- * @head: Pointer to the head of the stack.
+ * free_stack - Function that frees a doubly linked list.
+ * @head: Head pointer to the stack.
  *
  * Return: void
  */
 void free_stack(stack_t *head)
 {
-	stack_t *current = head;
+	stack_t *temp;
 
-	while (current)
+	temp = head;
+	while (head)
 	{
-		stack_t *temp = current;
-		current = current->next;
-		free(temp);
+		temp = head->next;
+		free(head);
+		head = temp;
 	}
 }
 
 /**
- * opcode_stack - Sets the stack mode (top of the stack is the head).
- * @stack: Pointer to the head of the stack.
- * @line_number: Line number being executed.
+ * f_stack - Function that prints the top
+ * @head: Head of stack
+ * @counter: Line count
  *
  * Return: void
  */
-void opcode_stack(stack_t **stack, unsigned int line_number)
+void f_stack(stack_t **head, unsigned int counter)
 {
-	(void)stack;
-	(void)line_number;
-
-	// monty
+	(void)head;
+	(void)counter;
+	
 }
